@@ -554,7 +554,7 @@ def main():
             for i, pred_id in zip([x["qid"] for x in raw_datasets["test"]], label_ids)
         }
 
-        json.dump(answers, open("나홀로집에.json", "w"))
+        json.dump(answers, open("results.json", "w"))
 
     if training_args.push_to_hub:
         trainer.push_to_hub(**kwargs)
